@@ -1,0 +1,11 @@
+HOW TO VIEW THIS SITE (do NOT double-click index.html)
+
+The pages are templates: the header/footer are stamped in by a tiny local server, and styles/scripts use
+site-root paths (/css/..., /js/...). Opening index.html directly (file://) therefore shows unstyled HTML.
+
+1. Install Node 18 or newer (https://nodejs.org) if you do not have it.
+2. In this folder run:   node scripts/dev-server.mjs
+   (Mac: double-click start.command.  Windows: double-click start.bat.)
+3. Open http://localhost:4173
+Admin: http://localhost:4173/admin/login  (sign in with your allow-listed Supabase account)
+To check everything works: see VERIFY.md (or double-click verify.command / verify.bat).

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>if(location.protocol==='file:'){document.write('<div style="font:16px/1.6 system-ui;max-width:560px;margin:15vh auto;padding:0 24px"><h1 style="font-size:24px">Open this site through the local server</h1><p>This page was opened as a file, so styles and scripts cannot load. Run <b>node scripts/dev-server.mjs</b> (or double-click start.command / start.bat) and open <b>http://localhost:4173</b>.</p></div>');}</script>
+<title>White Mist | Liquid laundry care</title>
+<meta name="description" content="White Mist liquid detergent, refill pouches, fabric conditioner and stain booster. Three fragrances, free delivery over ₹499.">
+<!--#include head-->
+</head>
+<body>
+<!--#include header-->
+<main id="main">
+
+<section class="hero" id="hero" data-frag="ocean" aria-label="White Mist">
+  <div class="bubbles" aria-hidden="true"><span class="bubble b1"></span><span class="bubble b2"></span><span class="bubble b3"></span><span class="bubble b4"></span><span class="bubble b5"></span><span class="bubble b6"></span><span class="bubble b7"></span><span class="bubble b8"></span><span class="bubble b9"></span><span class="bubble b10"></span></div>
+  <div class="wrap">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <h1>Premium Laundry Care.<br><span class="shine-text">Pure Cleanliness, Infinite Freshness.</span></h1>
+      <p class="lead">Liquid detergent, refill pouches, conditioner and stain booster in three fragrances. Free delivery over <strong><span data-free-threshold>₹499</span></strong>.</p>
+      <div class="checks">
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Front &amp; Top Load Safe</div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>10x Bio-Stain Removal</div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>48hr Scent Lock</div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Eco Spout Pouch Refills</div>
+      </div>
+      <div class="frag-pick">
+        <span class="pick-lbl" id="fp-l">Select Fragrance Variant:</span>
+        <div class="chips" role="group" aria-labelledby="fp-l">
+          <button type="button" class="chip" data-pick="ocean" aria-pressed="true"><span class="dot" style="background:var(--deep-ocean)"></span><span class="full">Blue Ocean Fresh</span><span class="short">Ocean</span></button>
+          <button type="button" class="chip" data-pick="floral" aria-pressed="false"><span class="dot" style="background:var(--deep-floral)"></span><span class="full">Pink Floral Bloom</span><span class="short">Floral</span></button>
+          <button type="button" class="chip" data-pick="citrus" aria-pressed="false"><span class="dot" style="background:var(--bright-citrus)"></span><span class="full">Yellow Citrus</span><span class="short">Citrus</span></button>
+        </div>
+      </div>
+      <div class="cta">
+        <a href="/shop" class="btn btn--primary btn--lg">Shop White Mist</a>
+        <a href="/dose-calculator" class="btn btn--secondary btn--lg">Calculate Dose</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="hero-glow"></div>
+      <div class="hero-bottle" id="hero-bottle"></div>
+      <div class="hero-pouch" id="hero-pouch"></div>
+      <div class="hero-badge" id="hero-badge" hidden><div class="ic">%</div><div><small>Super Saver</small><b id="hero-save">Save up to 0%</b></div></div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="why-white-mist">
+  <div class="wrap">
+    <div class="center-head"><span class="eyebrow">The White Mist advantage</span><h2 class="h-section" style="margin-top:8px">Why Homes Choose White Mist</h2><p>Simple things that make laundry day easier: clear pricing, flexible payment and the right dose for every wash.</p></div>
+    <div class="benefits">
+      <div class="benefit"><div class="ic">₹</div><h3>Free delivery</h3><p>Free over <span data-free-threshold>₹499</span>. A flat fee below that. Watch the progress bar in your cart.</p></div>
+      <div class="benefit"><div class="ic">✓</div><h3>Pay your way</h3><p>UPI, cards and net banking, or cash on delivery.</p></div>
+      <div class="benefit"><div class="ic">ml</div><h3>Right dose, less waste</h3><p>The dose calculator tells you how much to pour for your machine and load.</p></div>
+      <div class="benefit"><div class="ic">⇄</div><h3>Front &amp; top load</h3><p>Made for both front load and top load washing machines.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section stain-demo" id="stain-demo" aria-label="Stain removal demo">
+  <div class="wrap">
+    <div class="center-head" style="margin-bottom:48px">
+      <div class="pill-tag pill-tag--blue">Interactive stain removal demo</div>
+      <h2 class="h-section" style="margin:12px 0">Drag to Reveal the Clean</h2>
+      <p>Slide across the fabric to compare a stained cloth with a clean one. This is an illustration, not a lab result.</p>
+    </div>
+    <div class="stain-tabs" id="stain-tabs" role="group" aria-label="Stain type"></div>
+    <div class="stain-stage" id="stain-stage" role="slider" tabindex="0" aria-label="Before and after comparison" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+      <div class="stain-after"><span class="stain-tag stain-tag--ok">✓ AFTER: Clean &amp; fresh</span></div>
+      <div class="stain-before" id="stain-before"><div class="stain-before-in" id="stain-before-in"><span class="stain-tag stain-tag--bad" id="stain-bad"></span></div></div>
+      <div class="stain-handle" id="stain-handle"><span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
+    </div>
+    <div class="stain-foot"><button type="button" class="btn btn--primary" id="stain-auto">Auto wash animation</button></div>
+  </div>
+</section>
+
+<section class="section" id="products" style="background:var(--bg)">
+  <div class="wrap">
+  <div class="center-head" style="margin-bottom:32px">
+    <span class="eyebrow" style="color:var(--deep-ocean);font-weight:800;letter-spacing:.1em;font-size:13.6px;text-transform:uppercase">Featured fragrance range</span>
+    <h2 class="h-section" style="margin-top:8px">Choose Your Freshness Variant</h2>
+  </div>
+  <div class="filter-chips" role="group" aria-label="Filter by fragrance" style="justify-content:center;margin-bottom:40px">
+    <button type="button" class="chip" data-filter="all" aria-pressed="true">All Products</button>
+    <button type="button" class="chip" data-filter="ocean" aria-pressed="false"><span class="dot" style="background:var(--deep-ocean)"></span>Blue Ocean</button>
+    <button type="button" class="chip" data-filter="floral" aria-pressed="false"><span class="dot" style="background:var(--deep-floral)"></span>Pink Floral</button>
+    <button type="button" class="chip" data-filter="citrus" aria-pressed="false"><span class="dot" style="background:var(--bright-citrus)"></span>Yellow Citrus</button>
+  </div>
+  <div class="grid grid--home" id="range" aria-busy="true"></div>
+  <p class="tiny muted" style="margin-top:24px;text-align:center">Prices are sample figures copied from the existing site, for layout only. Client to confirm.</p>
+  <div style="text-align:center;margin-top:24px"><a href="/shop" class="btn btn--secondary">View all products</a></div>
+  </div>
+</section>
+
+
+<section class="section section--tint" id="enzyme-demo" aria-label="Wash simulation">
+  <div class="wrap enzyme-grid">
+    <div>
+      <div class="pill-tag pill-tag--pink">Wash simulation</div>
+      <h2 class="h-section" style="margin:16px 0 20px">Watch a Stain Lift Away</h2>
+      <p class="lead2">Tap the button to see the stages of a wash on a stained cloth. A simple animation to show the idea.</p>
+      <div class="enz-actions"><button type="button" class="btn btn--primary btn--lg" id="enz-go">Simulate wash action</button><button type="button" class="btn btn--secondary" id="enz-reset" hidden>Reset demo</button></div>
+      <div class="enz-steps" id="enz-steps"><span>1. Stained fabric</span><span>2. Detergent works in</span><span>3. Stain dissolves</span><span>4. Clean</span></div>
+    </div>
+    <div class="enz-stage" id="enz-stage" aria-hidden="true"><div class="enz-stain" id="enz-stain"></div><div class="enz-dots" id="enz-dots"></div><div class="enz-done" id="enz-done" hidden><div class="enz-check">✓</div><div class="enz-msg">Fresh and clean</div></div></div>
+  </div>
+</section>
+
+<section class="section scent" id="scent-lock" aria-label="Fragrance">
+  <div class="scent-glow" id="scent-glow"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="center-head" style="margin-bottom:48px">
+      <div class="pill-tag pill-tag--gold">Three fragrances</div>
+      <h2 class="h-section" style="margin:12px 0;color:#fff">Tap a Fragrance to Release the Aroma</h2>
+      <p style="color:#94A3B8">Pick a fragrance to preview its character.</p>
+    </div>
+    <div class="scent-tabs" id="scent-tabs" role="group" aria-label="Fragrance"></div>
+    <div class="scent-card" id="scent-card"><div class="scent-burst" id="scent-burst"></div><div class="scent-ic" id="scent-ic">✦</div><h3 id="scent-name"></h3><p id="scent-desc"></p></div>
+  </div>
+</section>
+
+<section class="section calc-band" id="stain-calculator">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Dose calculator</span>
+      <h2 class="h-section">The right amount, every wash.</h2>
+      <p>Pick your machine and how heavy the load is. We tell you how much to pour, using the dosing guidance printed on the product.</p>
+      <a class="btn btn--accent btn--lg" href="/dose-calculator">Open the full calculator</a>
+    </div>
+    <div class="calc-box" id="home-calc"></div>
+  </div>
+</section>
+
+<section class="saver" id="combos" hidden aria-label="Combo offers">
+  <div class="wrap" id="combo-list"></div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="center-head" style="margin-bottom:40px"><span class="eyebrow" style="color:var(--deep-floral)">Real laundry experiences</span><h2 class="h-section" style="margin-top:8px">What customers say</h2></div>
+    <div class="rev-empty"><strong>Customer reviews will appear here.</strong><p class="muted small" style="margin-top:6px">Only genuine reviews from real orders are shown. None are loaded yet.</p></div>
+  </div>
+</section>
+
+</main>
+<!--#include footer-->
+<script type="module" src="/js/shell.js"></script>
+<script type="module" src="/js/pages/home.js"></script>
+<script type="module" src="/js/pages/demos.js"></script>
+</body>
+</html>

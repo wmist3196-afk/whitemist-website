@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>if(location.protocol==='file:'){document.write('<div style="font:16px/1.6 system-ui;max-width:560px;margin:15vh auto;padding:0 24px"><h1 style="font-size:24px">Open this site through the local server</h1><p>This page was opened as a file, so styles and scripts cannot load. Run <b>node scripts/dev-server.mjs</b> (or double-click start.command / start.bat) and open <b>http://localhost:4173</b>.</p></div>');}</script>
+<title>Dose calculator | White Mist</title>
+<meta name="description" content="Work out how much White Mist liquid detergent to use for your machine and load size.">
+<!--#include head-->
+</head>
+<body>
+<!--#include header-->
+<main id="main">
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Dose calculator</span></nav>
+  <div class="page-head"><h1 class="page-title">Dose calculator</h1><p class="muted" style="margin-top:8px;max-width:520px">Choose your machine and load. We show how much to pour, based on the dosing guidance printed on the product.</p></div>
+  <div class="split" style="align-items:flex-start;padding-bottom:24px">
+    <div class="calc-box" id="calc"></div>
+    <div>
+      <h2 style="font-size:22px">Ready to stock up?</h2>
+      <p class="muted" style="margin-top:8px;max-width:420px">Liquid detergent comes in a 2 L bottle and a 1 L starter pack, and the refill pouch tops up your bottle.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:24px"><a class="btn btn--primary" href="/shop/liquid-detergent">Liquid detergent</a><a class="btn btn--secondary" href="/shop/refill-pouch">Refill pouch</a></div>
+    </div>
+  </div>
+</div>
+</main>
+<!--#include footer-->
+<script type="module" src="/js/shell.js"></script>
+<script type="module">
+import { mountCalculator } from '/js/components/calculator.js';
+mountCalculator(document.getElementById('calc'));
+</script>
+</body>
+</html>

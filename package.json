@@ -1,0 +1,6 @@
+{
+  "name": "white-mist-storefront",
+  "private": true,
+  "type": "module",
+  "scripts": { "start": "node scripts/dev-server.mjs", "build": "node scripts/build.mjs" }
+}
